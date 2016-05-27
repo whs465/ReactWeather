@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
     next();
   }
 });
-
+debugger;
 app.use(express.static('public'));
 
 app.listen(PORT, function () {
