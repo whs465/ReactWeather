@@ -23,7 +23,8 @@ module.exports = {
       Examples: 'app/components/Examples.jsx',
       ErrorModal: 'app/components/ErrorModal.jsx',
       WeatherMessage: 'app/components/WeatherMessage.jsx',
-      OpenWeatherMap: 'app/api/OpenWeatherMap.jsx'
+      OpenWeatherMap: 'app/api/OpenWeatherMap.jsx',
+      applicationStyles: 'app/styles/app.css'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -32,7 +33,10 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: [
+            'react', 'es2015', 'stage-0'
+          ],
+          compact: true
         },
         test: /\.jsx?$/,
         exclude: /(node_modules | bower_components)/
